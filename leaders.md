@@ -1,3 +1,4 @@
 ### Leaders
 
-* [Jim Manico](mailto://)
+* [Jim Manico](mailto:)
+* [Jeff Ichnowski](mailto:jeff.ichnowski@owasp.org)
