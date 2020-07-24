@@ -18,7 +18,7 @@ We actively track project issues and seek to remediate any issues that arise. Th
 
 Happy Encoding!
 
-## Quick Overview
+## Getting Started
 
 The OWASP Java Encoder library is intended for quick contextual encoding with very little overhead, either in performance or usage. To get started, simply add the encoder-1.2.2.jar, import org.owasp.encoder.Encode and start encoding.
 
