@@ -39,7 +39,7 @@ Extensive documentation on how to use this project can be found in our [GitHub r
 
 ## News and Events
 
-* [24 July 2020] GitHub migration complete!!
+* [24 July 2020] GitHub migration complete!!!
 * [14 September 2018] 1.2.2 Released!
 * [19 February 2017] 1.2.1 Released!
 * [11 June 2016] No reported issues and library use is strong!
