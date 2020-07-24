@@ -25,7 +25,8 @@ The OWASP Java Encoder library is intended for quick contextual encoding with ve
 Please look at the javadoc for Encode to see the variety of contexts for which you can encode. Tag libraries and JSP EL functions can be found in the encoder-jsp-1.2.2.jar.
 
 ## Licensing
-The OWASP Java Encoder is free to use under the New BSD License.
+
+The OWASP Java Encoder is free to use under the New BSD License. 
 
 ## Downloads 
 
