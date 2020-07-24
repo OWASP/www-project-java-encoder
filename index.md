@@ -6,9 +6,7 @@ tags: appsec xss encoding escaping defense java
 level: 0
 type: code
 
-auto-migrated: 1
-auto-migrated: 1
-auto-migrated: 1
+---
 
 ## Welcome
 
@@ -51,7 +49,7 @@ The OWASP Java Encoder is free to use under the New BSD License.
 * [20 Mar 2014] Doc additions
 * [5 Feb 2014] New Wiki
 * [4 Feb 2014] 1.1.1 Released
----
+
 
 
 <!-- Standard Chapter Page Template
