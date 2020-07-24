@@ -1,2 +1,2 @@
 ### Code Repository
-* [repo](https://github.com/OWASP/owasp-java-encoder/)
+* [GitHub](https://github.com/OWASP/owasp-java-encoder/)
