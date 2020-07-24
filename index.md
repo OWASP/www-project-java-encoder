@@ -28,6 +28,10 @@ Please look at the javadoc for Encode to see the variety of contexts for which y
 
 The OWASP Java Encoder is free to use under the New BSD License. 
 
+## GitHub
+
+Extensive documentation on how to use this project can be found in our [GitHub repository](https://github.com/OWASP/owasp-java-encoder).
+
 ## Downloads 
 
 * [encoder-1.2.2.jar](https://search.maven.org/remotecontent?filepath=org/owasp/encoder/encoder/1.2.2/encoder-1.2.2.jar)
