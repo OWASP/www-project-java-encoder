@@ -18,10 +18,6 @@ We actively track project issues and seek to remediate any issues that arise. Th
 
 Happy Encoding!
 
-## Introduction
-
-Contextual Output Encoding is a computer programming technique necessary to stop Cross Site Scripting. This project is a Java 1.5+ simple-to-use drop-in high-performance encoder class with no dependencies and little baggage. It provides numerous encoding functions to help defend against XSS in a variety of different HTML, JavaScript, XML and CSS contexts.
-
 ## Quick Overview
 
 The OWASP Java Encoder library is intended for quick contextual encoding with very little overhead, either in performance or usage. To get started, simply add the encoder-1.2.2.jar, import org.owasp.encoder.Encode and start encoding.
@@ -34,6 +30,7 @@ The OWASP Java Encoder is free to use under the New BSD License.
 ## Downloads 
 
 [encoder-1.2.2.jar](https://search.maven.org/remotecontent?filepath=org/owasp/encoder/encoder/1.2.2/encoder-1.2.2.jar)
+
 [encoder-jsp-1.2.2.jar](https://search.maven.org/remotecontent?filepath=org/owasp/encoder/encoder-jsp/1.2.2/encoder-jsp-1.2.2.jar)
 
 ## News and Events
