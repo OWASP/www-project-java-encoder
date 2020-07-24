@@ -29,9 +29,8 @@ The OWASP Java Encoder is free to use under the New BSD License.
 
 ## Downloads 
 
-[encoder-1.2.2.jar](https://search.maven.org/remotecontent?filepath=org/owasp/encoder/encoder/1.2.2/encoder-1.2.2.jar)
-
-[encoder-jsp-1.2.2.jar](https://search.maven.org/remotecontent?filepath=org/owasp/encoder/encoder-jsp/1.2.2/encoder-jsp-1.2.2.jar)
+* [encoder-1.2.2.jar](https://search.maven.org/remotecontent?filepath=org/owasp/encoder/encoder/1.2.2/encoder-1.2.2.jar)
+* [encoder-jsp-1.2.2.jar](https://search.maven.org/remotecontent?filepath=org/owasp/encoder/encoder-jsp/1.2.2/encoder-jsp-1.2.2.jar)
 
 ## News and Events
 
