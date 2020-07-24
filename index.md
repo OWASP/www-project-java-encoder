@@ -50,17 +50,3 @@ Extensive documentation on how to use this project can be found in our [GitHub r
 * [20 Mar 2014] Doc additions
 * [5 Feb 2014] New Wiki
 * [4 Feb 2014] 1.1.1 Released
-
-
-<!--
-
-```
-{info.md}
-
-This separate file is where you should place links to your Google Group and Meetup page. It will be automatically rendered in the column sidebar.
-
-{leaders.md}
-
-Another separate file that should simply include each leaders name with mailto link as a list. It will also be automatically rendered in the column sidebar.
-
--->
