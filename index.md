@@ -45,7 +45,7 @@ with a proper encoding function. The encoding pattern is
 <b>"Encode.forContextName(untrustedData)"</b>, where "ContextName" is
 the name of the target context and "untrustedData" is untrusted output.
 
-## Basic HTML Context
+## Basic HTML Context2
 
 	<body>
 	<%= <b>Encode.forHtml(UNTRUSTED)</b> %\>
