@@ -32,11 +32,6 @@ The OWASP Java Encoder is free to use under the New BSD License.
 
 Extensive documentation on how to use this project can be found in our [GitHub repository](https://github.com/OWASP/owasp-java-encoder).
 
-## Downloads 
-
-* [encoder-1.2.2.jar](https://search.maven.org/remotecontent?filepath=org/owasp/encoder/encoder/1.2.2/encoder-1.2.2.jar)
-* [encoder-jsp-1.2.2.jar](https://search.maven.org/remotecontent?filepath=org/owasp/encoder/encoder-jsp/1.2.2/encoder-jsp-1.2.2.jar)
-
 # Use the Java Encoder Project
 
 The general API pattern is to utilize the Java Encoder Project in your
@@ -329,7 +324,7 @@ the template literal.
 
 Another method is to properly escape the variable in-line.
 
-	${"<%= Encode.forJavaScript(user) $>"}, here is your total ${total}
+		${"<%= Encode.forJavaScript(user) $>"}, here is your total ${total}
 
 
 ## News and Events
