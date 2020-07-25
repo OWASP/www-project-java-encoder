@@ -45,7 +45,7 @@ with a proper encoding function. The encoding pattern is
 <b>"Encode.forContextName(untrustedData)"</b>, where "ContextName" is
 the name of the target context and "untrustedData" is untrusted output.
 
-## Basic HTML Context2
+## Basic HTML Context
 
 	<body>
 	<%= <b>Encode.forHtml(UNTRUSTED)</b> %\>
@@ -83,9 +83,9 @@ might be easier for developers to use.
 
 ## Javascript Variable context
 
-` `<button
-  onclick="alert('<%= <b>Encode.forJavaScriptAttribute(UNTRUSTED)</b> %>');">
-` click me`</button>
+	<button
+	onclick="alert('<%= <b>Encode.forJavaScriptAttribute(UNTRUSTED)</b> %>');">
+	click me`</button>
 
 JavaScript Content Notes: <b>Encode.forJavaScript(UNTRUSTED)</b> is safe
 for the above two contexts, but encodes more characters and is less
@@ -93,56 +93,44 @@ efficient.
 
 ## Encode URL parameter values
 
-<a href="/search?value=<%= <b>Encode.forUriComponent(UNTRUSTED)</b> %>&order=1#top">
+	<a href="/search?value=<%= <b>Encode.forUriComponent(UNTRUSTED)</b> %>&order=1#top">
 
 ## Encode REST URL parameters
 
-<a href="/page/<%= <b>Encode.forUriComponent(UNTRUSTED)</b> %>">
+	<a href="/page/<%= <b>Encode.forUriComponent(UNTRUSTED)</b> %>">
 
 ## Handling a Full Untrusted URL
 
 When handling a full URL with the OWASP Java encoder, first verify the
 URL is a legal URL.
 
-`String url = validateURL(untrustedInput);`
+	String url = validateURL(untrustedInput);`
 
 Then encode the URL as an HTML attribute when outputting to the page.
 Note the linkable text needs to be encoded in a different context.
 
-` `<a href="<%= <b>Encode.forHtmlAttribute(untrustedUrl)</b> %>">
-` <%= `<b>`Encode.forHtmlContent(untrustedLinkName)`</b>` %>`
-` `</a>
+	<a href="<%= <b>Encode.forHtmlAttribute(untrustedUrl)</b> %>">
+	<%= `<b>`Encode.forHtmlContent(untrustedLinkName)`</b>` %>
+	</a>
 
 ## To use in a JSP with EL
 
-`<%@page contentType="text/html" pageEncoding="UTF-8"%>`
-`<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"`
-`   "http://www.w3.org/TR/html4/loose.dtd">`
-`<%@taglib prefix="e" uri="https://www.owasp.org/index.php/OWASP_Java_Encoder_Project" %>`
+	<%@page contentType="text/html" pageEncoding="UTF-8"%>`
+	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">`
+	<%@taglib prefix="e" uri="https://www.owasp.org/index.php/OWASP_Java_Encoder_Project" %>
 
-<html>
-
-<head>
-
-<title>
-
-<b><e:forHtml value="${param.title}" /></b>
-
-</title>
-
-</head>
-
-<body>
-
-<h1>
-
-<b>${e:forHtml(param.data)}</b>
-
-</h1>
-
-</body>
-
-</html>
+	<html>
+	<head>
+	<title>
+	<b><e:forHtml value="${param.title}" /></b>
+	</title>
+	</head>
+	<body>
+	<h1>
+	<b>${e:forHtml(param.data)}</b>
+	</h1>
+	</body>
+	</html>
 
 Other contexts can be found in the [org.owasp.Encode class
 methods](https://owasp.github.io/owasp-java-encoder/encoder/apidocs/index.html?index-all.html),
@@ -154,7 +142,7 @@ Numbers don’t need encoding since they cannot cause XSS. There are no
 numbers that will break out of a javascript context. <b>If (and only if)
 ‘javaNumber’ is a numeric type (primitive or box wrapper), just use:</b>
 
-`var javaScriptNumber = <%= javaNumber %>;`
+	var javaScriptNumber = <%= javaNumber %>;
 
 This is true even for the special cases of
 java.lang.Double.POSITIVE_INFINITY, NEGATIVE_INFINITY, NaN, and
@@ -165,28 +153,24 @@ NOT a numeric type, then you should either (1) convert it to a number on
 the java side, or (2) encode it to a string and handle it on the
 javascript side. E.g.
 
-`<% // option (1)`
-`String javaNumber = (untrusted data);`
-`Double actualNumber = Double.parseDouble(javaNumber); // don’t forget to catch NumberFormatException`
-`%>`
+	<% // option (1)
+	String javaNumber = (untrusted data);
+	Double actualNumber = Double.parseDouble(javaNumber); // don’t forget to catch NumberFormatException
+	%>
 
-<script>
-
-`var jsNumber = <%= actualNumber %>;`
-
-</script>
+	<script>
+	var jsNumber = <%= actualNumber %>;
+	</script>
 
 <b>-- OR --</b>
 
-`<% // option (2)`
-`String javaNumber = (untrusted data);`
-`%>`
+	<% // option (2)
+	String javaNumber = (untrusted data);
+	%>
 
-<script>
-
-`var jsNumber = parseInt("<%=Encode.forJavaScript(javaNumber)%>");`
-
-</script>
+	<script>
+	var jsNumber = parseInt("<%=Encode.forJavaScript(javaNumber)%>");
+	</script>
 
 # Deploy the Java Encoder Project
 
@@ -202,11 +186,11 @@ Direct Download:
 
 ### Maven
 
-<dependency>
-`   `<groupId>`org.owasp.encoder`</groupId>
-`   `<artifactId>`encoder`</artifactId>
-`   `<version>`1.2.2`</version>
-</dependency>
+	<dependency>
+		<groupId>`org.owasp.encoder`</groupId>
+		<artifactId>`encoder`</artifactId>
+		<version>`1.2.2`</version>
+	</dependency>
 
 ## JSP Tag Library
 
@@ -215,11 +199,11 @@ Direct Download:
 
 ### Maven
 
-<dependency>
-`   `<groupId>`org.owasp.encoder`</groupId>
-`   `<artifactId>`encoder-jsp`</artifactId>
-`   `<version>`1.2.2`</version>
-</dependency>
+	<dependency>
+		<groupId>`org.owasp.encoder`</groupId>
+		<artifactId>`encoder-jsp`</artifactId>
+		<version>`1.2.2`</version>
+	</dependency>
 
 # Grave Accent Issue
 
@@ -243,8 +227,8 @@ In Internet Explorer, the grave accent is usable as an HTML attribute
 quotation character, equivalent to single and double quotes.
 Specifically, IE treats the following as equivalent:
 
-<input value="this is the value">
-``<input value=`this is the value`>``
+	<input value="this is the value">
+	``<input value=`this is the value`>``
 
 It is an IE extension, is not in HTML specifications
 ([HTML4](http://www.w3.org/TR/REC-html40/intro/sgmltut.html#h-3.2.2),
@@ -256,21 +240,16 @@ probably not well supported in other browsers.
 The following HTML snippet, demonstrates the cross-site scripting
 vulnerability related to grave accents on unpatched Internet Explorer:
 
-<div id=a>
+	<div id=a>
+	<input value="``onmouseover=alert(1)">
+	</div>
 
-<input value="``onmouseover=alert(1)">
+	<div id=b>
+	</div>
 
-</div>
-
-<div id=b>
-
-</div>
-
-<script>
-
-b.innerHTML=a.innerHTML
-
-</script>
+	<script>
+	b.innerHTML=a.innerHTML
+	</script>
 
 When this snippet is run in Internet Explorer the following steps
 happen:
@@ -278,12 +257,12 @@ happen:
 1.  Two div elements are created with id's "a" and "b"
 2.  The script executes "a.innerHTML" which returns:
 
-<input value=``onmouseover=alert(1)>
+	<input value=``onmouseover=alert(1)>
 
-1.  The script sets "b.innerHTML" to the value from (2) and is converted
+3.  The script sets "b.innerHTML" to the value from (2) and is converted
     to the DOM equivalent of
 
-<input value="" onmouseover="alert(1)">
+	<input value="" onmouseover="alert(1)">
 
 The XSS issue arises from IE returning a value from innerHTML that it
 does not parse back into the original DOM. Patched version of IE fix
@@ -293,7 +272,7 @@ accent can avoid this issue.
 
 When...
 
-<input value="``onmouseover=alert(1)">
+	<input value="``onmouseover=alert(1)">
 
 ...is the input, "a.innerHTML" returns the same XSS vector as it does
 without the encoding.
@@ -305,17 +284,15 @@ read to replace the accent grave with a numeric entity encoded form:
 "\`". As an example, the following change to the XSS vulnerable code
 above fixes the issue:
 
-<script>
-
-a.innerHTML=b.innerHTML.replace(/\`/g, "\`");
-
-</script>
+	<script>
+	a.innerHTML=b.innerHTML.replace(/\`/g, "\`");
+	</script>
 
 This can be done in any library code that reads the innerHTML. To follow
 how this addresses the issue, the innerHTML from step 2 of the issue is
 converted to:
 
-<input value=&#96;&#96;onmouseover=alert(1)>
+	<input value=&#96;&#96;onmouseover=alert(1)>
 
 Since the browser will no longer see the grave accents as an empty
 attribute, it will convert the input back to a copy of its original DOM.
@@ -347,12 +324,12 @@ The best way to encode template literal variables is to first escape the
 untrusted data in a JavaScript variable and then place that variable in
 the template literal.
 
-`var user = "<%= Encode.forJavaScript(user) %>";`
-`` `Hello ${user}, here is your total: ${total}` ``
+	`var user = "<%= Encode.forJavaScript(user) %>";`
+	`` `Hello ${user}, here is your total: ${total}` ``
 
 Another method is to properly escape the variable in-line.
 
-`` `Hello ${"<%= Encode.forJavaScript(user) $>"}, here is your total ${total}` ``
+	lo ${"<%= Encode.forJavaScript(user) $>"}, here is your total ${total}` ``
 
 
 ## News and Events
