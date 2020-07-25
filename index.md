@@ -70,10 +70,8 @@ might be easier for developers to use.
 ## Javascript Block context
 
 	<script type="text/javascript">
-
 	var msg = "<%= Encode.forJavaScriptBlock(UNTRUSTED) %>";`
 	alert(msg);`
-
 	</script>
 
 ## Javascript Variable context
