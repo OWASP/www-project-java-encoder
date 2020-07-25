@@ -59,7 +59,7 @@ the name of the target context and "untrustedData" is untrusted output.
 
 ## HTML Attribute context
 
-	<input type="text" name="address" value="<%= <b>`Encode.forHtmlAttribute(UNTRUSTED)`</b>` %>" />`
+	<input type="text" name="address" value="<%= Encode.forHtmlAttribute(UNTRUSTED) %>" />
 
 Generally <b>Encode.forHtml(UNTRUSTED)</b> is also safe but slightly
 less efficient for the above two contexts (for textarea content and
@@ -68,15 +68,15 @@ might be easier for developers to use.
 
 ## CSS contexts
 
-	<div style="width:<= <b>Encode.forCssString(UNTRUSTED)</b> %>">
+	<div style="width:<= Encode.forCssString(UNTRUSTED) %>">
 
-	<div style="background:<= <b>Encode.forCssUrl(UNTRUSTED)</b> %>">
+	<div style="background:<= Encode.forCssUrl(UNTRUSTED) %>">
 
 ## Javascript Block context
 
 	<script type="text/javascript">
 
-	var msg = "<%= `<b>`Encode.forJavaScriptBlock(UNTRUSTED)`</b>` %>";`
+	var msg = "<%= Encode.forJavaScriptBlock(UNTRUSTED) %>";`
 	alert(msg);`
 
 	</script>
@@ -84,8 +84,8 @@ might be easier for developers to use.
 ## Javascript Variable context
 
 	<button
-	onclick="alert('<%= <b>Encode.forJavaScriptAttribute(UNTRUSTED)</b> %>');">
-	click me`</button>
+	onclick="alert('<%= Encode.forJavaScriptAttribute(UNTRUSTED) %>');">
+	click me</button>
 
 JavaScript Content Notes: <b>Encode.forJavaScript(UNTRUSTED)</b> is safe
 for the above two contexts, but encodes more characters and is less
@@ -93,11 +93,11 @@ efficient.
 
 ## Encode URL parameter values
 
-	<a href="/search?value=<%= <b>Encode.forUriComponent(UNTRUSTED)</b> %>&order=1#top">
+	<a href="/search?value=<%= Encode.forUriComponent(UNTRUSTED) %>&order=1#top">
 
 ## Encode REST URL parameters
 
-	<a href="/page/<%= <b>Encode.forUriComponent(UNTRUSTED)</b> %>">
+	<a href="/page/<%= Encode.forUriComponent(UNTRUSTED) %>">
 
 ## Handling a Full Untrusted URL
 
@@ -109,14 +109,14 @@ URL is a legal URL.
 Then encode the URL as an HTML attribute when outputting to the page.
 Note the linkable text needs to be encoded in a different context.
 
-	<a href="<%= <b>Encode.forHtmlAttribute(untrustedUrl)</b> %>">
-	<%= `<b>`Encode.forHtmlContent(untrustedLinkName)`</b>` %>
+	<a href="<%= Encode.forHtmlAttribute(untrustedUrl) %>">
+	<%= Encode.forHtmlContent(untrustedLinkName) %>
 	</a>
 
 ## To use in a JSP with EL
 
-	<%@page contentType="text/html" pageEncoding="UTF-8"%>`
-	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">`
+	<%@page contentType="text/html" pageEncoding="UTF-8"%>
+	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 	<%@taglib prefix="e" uri="https://www.owasp.org/index.php/OWASP_Java_Encoder_Project" %>
 
 	<html>
@@ -187,9 +187,9 @@ Direct Download:
 ### Maven
 
 	<dependency>
-		<groupId>`org.owasp.encoder`</groupId>
-		<artifactId>`encoder`</artifactId>
-		<version>`1.2.2`</version>
+		<groupId>org.owasp.encoder</groupId>
+		<artifactId>encoder</artifactId>
+		<version>1.2.2</version>
 	</dependency>
 
 ## JSP Tag Library
@@ -200,9 +200,9 @@ Direct Download:
 ### Maven
 
 	<dependency>
-		<groupId>`org.owasp.encoder`</groupId>
-		<artifactId>`encoder-jsp`</artifactId>
-		<version>`1.2.2`</version>
+		<groupId>org.owasp.encoder</groupId>
+		<artifactId>encoder-jsp</artifactId>
+		<version>1.2.2</version>
 	</dependency>
 
 # Grave Accent Issue
@@ -228,7 +228,7 @@ quotation character, equivalent to single and double quotes.
 Specifically, IE treats the following as equivalent:
 
 	<input value="this is the value">
-	``<input value=`this is the value`>``
+	<input value=`this is the value`>
 
 It is an IE extension, is not in HTML specifications
 ([HTML4](http://www.w3.org/TR/REC-html40/intro/sgmltut.html#h-3.2.2),
@@ -324,12 +324,12 @@ The best way to encode template literal variables is to first escape the
 untrusted data in a JavaScript variable and then place that variable in
 the template literal.
 
-	`var user = "<%= Encode.forJavaScript(user) %>";`
-	`` `Hello ${user}, here is your total: ${total}` ``
+	var user = "<%= Encode.forJavaScript(user) %>";
+	Hello ${user}, here is your total: ${total}
 
 Another method is to properly escape the variable in-line.
 
-	lo ${"<%= Encode.forJavaScript(user) $>"}, here is your total ${total}` ``
+	${"<%= Encode.forJavaScript(user) $>"}, here is your total ${total}
 
 
 ## News and Events
