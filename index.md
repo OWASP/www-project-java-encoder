@@ -47,23 +47,20 @@ the name of the target context and "untrustedData" is untrusted output.
 
 ## Basic HTML Context
 
-<body>
-
-\<%= <b>Encode.forHtml(UNTRUSTED)</b> %\>
-
-</body>
+	<body>
+	<%= <b>Encode.forHtml(UNTRUSTED)</b> %\>
+	</body>
 
 ## HTML Content Context
 
-<textarea name="text">
-
-\<%= <b>Encode.forHtmlContent(UNTRUSTED)</b> %\>
-
-</textarea>
+	<textarea name="text">
+	<%= <b>Encode.forHtmlContent(UNTRUSTED)</b> %\>
+	</textarea>
 
 ## HTML Attribute context
 
-<input type="text" name="address" value="<%= <b>`Encode.forHtmlAttribute(UNTRUSTED)`</b>` %>" />`
+	<input type="text" name="address" value="<%= <b>`Encode.forHtmlAttribute(UNTRUSTED)`</b>` %>" />`
+
 Generally <b>Encode.forHtml(UNTRUSTED)</b> is also safe but slightly
 less efficient for the above two contexts (for textarea content and
 input value text) since it encodes more characters than necessary but
@@ -71,19 +68,18 @@ might be easier for developers to use.
 
 ## CSS contexts
 
-<div style="width:<= <b>Encode.forCssString(UNTRUSTED)</b> %>">
+	<div style="width:<= <b>Encode.forCssString(UNTRUSTED)</b> %>">
 
-<div style="background:<= <b>Encode.forCssUrl(UNTRUSTED)</b> %>">
+	<div style="background:<= <b>Encode.forCssUrl(UNTRUSTED)</b> %>">
 
 ## Javascript Block context
 
-<script type="text/javascript">
+	<script type="text/javascript">
 
-` var msg = "<%= `<b>`Encode.forJavaScriptBlock(UNTRUSTED)`</b>` %>";`
-` alert(msg);`
-` `
+	var msg = "<%= `<b>`Encode.forJavaScriptBlock(UNTRUSTED)`</b>` %>";`
+	alert(msg);`
 
-</script>
+	</script>
 
 ## Javascript Variable context
 
