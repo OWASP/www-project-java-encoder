@@ -2,11 +2,11 @@
 title: Deploy
 layout:  null
 tab: true
-order: 5
+order: 6
 tags: java-encoder-tag
 ---
 
-## How to Deploy the Java Encoder Project
+## How to Deploy the Java Encoder
 
 The OWASP Java Encoder version 1.2.2 is now available in central
 

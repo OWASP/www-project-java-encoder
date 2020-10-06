@@ -8,7 +8,7 @@ type: code
 
 ---
 
-## Welcome
+## About
 
 The OWASP Java Encoder is a Java 1.5+ simple-to-use drop-in high-performance encoder class with no dependencies and little baggage. This project will help Java web developers defend against Cross Site Scripting!
 

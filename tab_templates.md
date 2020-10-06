@@ -3,7 +3,7 @@ title: Templates
 displaytext: Template Literals
 layout:  null
 tab: true
-order: 6
+order: 5
 tags: java-encoder-tag
 ---
 

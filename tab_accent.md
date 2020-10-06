@@ -7,7 +7,7 @@ order: 4
 tags: java-encoder-tag
 ---
 
-## Grave accent Issue
+## Grave Accent Issue
 
 The following describes the Grave Accent XSS issue with unpatched versions of Internet Explorer. Thank you to <b>Rafay Baloch</b> for bringing this to our attention and to <b>Jeff Ichnowski</b> for the workaround.
 
