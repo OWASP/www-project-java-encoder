@@ -15,17 +15,17 @@ with a proper encoding function. The encoding pattern is
 the name of the target context and "untrustedData" is untrusted output.
 
 ### Basic HTML Context
-```html
-	<body>
+```java
+<body>
 	<%= <b>Encode.forHtml(UNTRUSTED)</b> %\>
-	</body>
+</body>
 ```
 
 ### HTML Content Context
 ```java
-	<textarea name="text">
-	<%= <b>Encode.forHtmlContent(UNTRUSTED)</b> %\>
-	</textarea>
+<textarea name="text">
+    <%= <b>Encode.forHtmlContent(UNTRUSTED)</b> %\>
+</textarea>
 ```
 
 ### HTML Attribute context
@@ -38,52 +38,54 @@ input value text) since it encodes more characters than necessary but
 might be easier for developers to use.
 
 ### Encode URL parameter values
-
+```java
 	<a href="/search?value=<%= Encode.forUriComponent(UNTRUSTED) %>&order=1#top">
+```
 
 ### Encode REST URL parameters
-
+```java
 	<a href="/page/<%= Encode.forUriComponent(UNTRUSTED) %>">
+```
 
 ### Handling a Full Untrusted URL
 
 When handling a full URL with the OWASP Java encoder, first verify the
 URL is a legal URL.
-
+```java
 	String url = validateURL(untrustedInput);`
+```
 
 Then encode the URL as an HTML attribute when outputting to the page.
 Note the linkable text needs to be encoded in a different context.
-
+```java
 	<a href="<%= Encode.forHtmlAttribute(untrustedUrl) %>">
-	<%= Encode.forHtmlContent(untrustedLinkName) %>
+	    <%= Encode.forHtmlContent(untrustedLinkName) %>
 	</a>
+```
 
 ### Javascript Block context
 ```javascript
-	<script type="text/javascript">
+<script type="text/javascript">
 	var msg = "<%= Encode.forJavaScriptBlock(UNTRUSTED) %>";`
 	alert(msg);`
-	</script>
+</script>
 ```
 
 ### Javascript Variable context
-
+```javascript
 	<button
 	onclick="alert('<%= Encode.forJavaScriptAttribute(UNTRUSTED) %>');">
 	click me</button>
+```
 
-JavaScript Content Notes: <b>Encode.forJavaScript(UNTRUSTED)</b> is safe
-for the above two contexts, but encodes more characters and is less
-efficient.
-
+JavaScript Content Notes: <b>Encode.forJavaScript(UNTRUSTED)</b> is safe for the above two contexts, but encodes more characters and is less efficient.
 
 
 ### CSS contexts
-
+```java
 	<div style="width:<= Encode.forCssString(UNTRUSTED) %>">
-
 	<div style="background:<= Encode.forCssUrl(UNTRUSTED) %>">
+```
 
 ### To use in a JSP with EL
 
