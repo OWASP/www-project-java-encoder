@@ -165,38 +165,6 @@ javascript side. E.g.
 	var jsNumber = parseInt("<%=Encode.forJavaScript(javaNumber)%>");
 	</script>
 
-# Deploy the Java Encoder Project
-
-The OWASP Java Encoder version 1.2.2 is now available in central\!
-
-[OWASP Encoder at Maven
-Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.owasp.encoder%22).
-
-## Core
-
-Direct Download:
-[encoder-1.2.2.jar](http://search.maven.org/remotecontent?filepath=org/owasp/encoder/encoder/1.2.2/encoder-1.2.2.jar)
-
-### Maven
-
-	<dependency>
-		<groupId>org.owasp.encoder</groupId>
-		<artifactId>encoder</artifactId>
-		<version>1.2.2</version>
-	</dependency>
-
-## JSP Tag Library
-
-Direct Download:
-[encoder-jsp-1.2.2.jar](https://search.maven.org/remotecontent?filepath=org/owasp/encoder/encoder-jsp/1.2.2/encoder-jsp-1.2.2.jar)
-
-### Maven
-
-	<dependency>
-		<groupId>org.owasp.encoder</groupId>
-		<artifactId>encoder-jsp</artifactId>
-		<version>1.2.2</version>
-	</dependency>
 
 # Grave Accent Issue
 
@@ -324,17 +292,3 @@ Another method is to properly escape the variable in-line.
 
 		${"<%= Encode.forJavaScript(user) $>"}, here is your total ${total}
 
-
-## News and Events
-
-* [24 July 2020] GitHub migration complete!!!
-* [14 September 2018] 1.2.2 Released!
-* [19 February 2017] 1.2.1 Released!
-* [11 June 2016] No reported issues and library use is strong!
-* [1 May 2015] Moved to GitHub
-* [12 Apr 2015] 1.2 Released!
-* [10 Apr 2015] GitHub move
-* [1 Feb 2015] Removed ThreadLocal
-* [20 Mar 2014] Doc additions
-* [5 Feb 2014] New Wiki
-* [4 Feb 2014] 1.1.1 Released
