@@ -2,7 +2,7 @@
 
 layout: col-sidebar
 title: OWASP Java Encoder
-tags: appsec xss encoding escaping defense java
+tags: java-encoder-tag
 level: 0
 type: code
 
