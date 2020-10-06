@@ -1,9 +1,9 @@
 ---
 title: Accent
-displaytext: Grave accent
+displaytext: Grave Accent
 layout:  null
 tab: true
-order: 3
+order: 4
 tags: java-encoder-tag
 ---
 

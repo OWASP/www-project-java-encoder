@@ -52,7 +52,7 @@ might be easier for developers to use.
 When handling a full URL with the OWASP Java encoder, first verify the
 URL is a legal URL.
 ```java
-	String url = validateURL(untrustedInput);`
+	String url = validateURL(untrustedInput);
 ```
 
 Then encode the URL as an HTML attribute when outputting to the page.
@@ -66,16 +66,16 @@ Note the linkable text needs to be encoded in a different context.
 ### Javascript Block context
 ```javascript
 <script type="text/javascript">
-	var msg = "<%= Encode.forJavaScriptBlock(UNTRUSTED) %>";`
-	alert(msg);`
+	var msg = "<%= Encode.forJavaScriptBlock(UNTRUSTED) %>";
+	alert(msg);
 </script>
 ```
 
 ### Javascript Variable context
-```javascript
-	<button
-	onclick="alert('<%= Encode.forJavaScriptAttribute(UNTRUSTED) %>');">
-	click me</button>
+```java
+<button onclick="alert('<%= Encode.forJavaScriptAttribute(UNTRUSTED) %>');">
+	click me
+   </button>
 ```
 
 JavaScript Content Notes: <b>Encode.forJavaScript(UNTRUSTED)</b> is safe for the above two contexts, but encodes more characters and is less efficient.
