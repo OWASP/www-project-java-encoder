@@ -1,12 +1,13 @@
 ---
 title: Use
+displaytext: How to Use
 layout:  null
 tab: true
 order: 2
 tags: java-encoder-tag
 ---
 
-## How to Use the OWASP Java Encoder Project
+## How to Use the OWASP Java Encoder
 
 The general API pattern is to utilize the Java Encoder Project in your
 user interface code and wrap all variables added dynamically to HTML
@@ -49,8 +50,7 @@ might be easier for developers to use.
 
 ### Handling a Full Untrusted URL
 
-When handling a full URL with the OWASP Java encoder, first verify the
-URL is a legal URL.
+When handling a full URL with the OWASP Java encoder, first validate to ensure the URL is in the format of a legal URL.
 ```java
 	String url = validateURL(untrustedInput);
 ```
@@ -79,7 +79,6 @@ Note the linkable text needs to be encoded in a different context.
 ```
 
 JavaScript Content Notes: <b>Encode.forJavaScript(UNTRUSTED)</b> is safe for the above two contexts, but encodes more characters and is less efficient.
-
 
 ### CSS contexts
 ```java

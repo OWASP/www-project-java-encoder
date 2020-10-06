@@ -22,7 +22,7 @@ Happy Encoding!
 
 The OWASP Java Encoder library is intended for quick contextual encoding with very little overhead, either in performance or usage. To get started, simply add the encoder-1.2.2.jar, import org.owasp.encoder.Encode and start encoding.
 
-Please look at the javadoc for Encode to see the variety of contexts for which you can encode. Tag libraries and JSP EL functions can be found in the encoder-jsp-1.2.2.jar.
+Please look at the javadoc for [Encode] (https://owasp.github.io/owasp-java-encoder/encoder/apidocs/index.html?index-all.html), to see the variety of contexts for which you can encode. Tag libraries and JSP EL functions can be found in the encoder-jsp-1.2.2.jar.
 
 ## Licensing
 
@@ -31,24 +31,4 @@ The OWASP Java Encoder is free to use under the New BSD License.
 ## GitHub
 
 Extensive documentation on how to use this project can be found in our [GitHub repository](https://github.com/OWASP/owasp-java-encoder).
-
-
-
-
-
-# Encoding and Template Literals
-
-Several users of the Java Encoder have asked how to properly use the
-OWASP Java Encoder in combination with template literals.
-
-The best way to encode template literal variables is to first escape the
-untrusted data in a JavaScript variable and then place that variable in
-the template literal.
-
-	var user = "<%= Encode.forJavaScript(user) %>";
-	Hello ${user}, here is your total: ${total}
-
-Another method is to properly escape the variable in-line.
-
-		${"<%= Encode.forJavaScript(user) $>"}, here is your total ${total}
 
