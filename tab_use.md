@@ -3,7 +3,7 @@ title: Use
 layout:  null
 tab: true
 order: 2
-tags: javaEncoder-tag
+tags: java-encoder-tag
 ---
 
-## Example
+## How to Use
