@@ -2,7 +2,7 @@
 
 layout: col-sidebar
 title: OWASP Java Encoder
-tags: java-encoder-tag
+tags: javaEncoder-tag
 level: 0
 type: code
 
