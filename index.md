@@ -20,9 +20,9 @@ Happy Encoding!
 
 ## Getting Started
 
-The OWASP Java Encoder library is intended for quick contextual encoding with very little overhead, either in performance or usage. To get started, simply add the encoder-1.2.2.jar, import org.owasp.encoder.Encode and start encoding.
+The OWASP Java Encoder library is intended for quick contextual encoding with very little overhead, either in performance or usage. To get started, simply add the encoder-1.2.3.jar, import org.owasp.encoder.Encode and start encoding.
 
-Please look at the javadoc for [Encode] (https://owasp.github.io/owasp-java-encoder/encoder/apidocs/index.html?index-all.html), to see the variety of contexts for which you can encode. Tag libraries and JSP EL functions can be found in the encoder-jsp-1.2.2.jar.
+Please look at the javadoc for [Encode] (https://owasp.github.io/owasp-java-encoder/encoder/apidocs/index.html?index-all.html), to see the variety of contexts for which you can encode. Tag libraries and JSP EL functions can be found in the encoder-jsp-1.2.3.jar.
 
 ## Licensing
 

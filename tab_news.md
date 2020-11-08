@@ -8,6 +8,7 @@ tags: java-encoder-tag
 
 ## News and Events
 
+* [8 November 2020] 1.2.3 Released!
 * [24 July 2020] GitHub migration complete!!!
 * [14 September 2018] 1.2.2 Released!
 * [19 February 2017] 1.2.1 Released!
