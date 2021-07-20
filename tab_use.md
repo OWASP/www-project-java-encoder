@@ -104,9 +104,3 @@ JavaScript Content Notes: <b>Encode.forJavaScript(UNTRUSTED)</b> is safe for the
 	</h1>
 	</body>
 	</html>
-
-Other contexts can be found in the [org.owasp.Encode class
-methods](https://owasp.github.io/owasp-java-encoder/encoder/apidocs/index.html?index-all.html),
-including XML contexts and more.
-
-
