@@ -18,14 +18,14 @@ the name of the target context and "untrustedData" is untrusted output.
 ### Basic HTML Context
 ```java
 <body>
-	<%= <b>Encode.forHtml(UNTRUSTED)</b> %\>
+	<b><%= Encode.forHtml(UNTRUSTED) %></b>
 </body>
 ```
 
 ### HTML Content Context
 ```java
 <textarea name="text">
-    <%= <b>Encode.forHtmlContent(UNTRUSTED)</b> %\>
+    <b><%= Encode.forHtmlContent(UNTRUSTED) %></b>
 </textarea>
 ```
 
@@ -104,9 +104,3 @@ JavaScript Content Notes: <b>Encode.forJavaScript(UNTRUSTED)</b> is safe for the
 	</h1>
 	</body>
 	</html>
-
-Other contexts can be found in the [org.owasp.Encode class
-methods](https://owasp.github.io/owasp-java-encoder/encoder/apidocs/index.html?index-all.html),
-including XML contexts and more.
-
-
