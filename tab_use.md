@@ -16,13 +16,15 @@ with a proper encoding function. The encoding pattern is
 the name of the target context and "untrustedData" is untrusted output.
 
 ### Basic HTML Context
+
 ```java
 <body>
-	<b><%= Encode.forHtml(UNTRUSTED) %></b>
+    <b><%= Encode.forHtml(UNTRUSTED) %></b>
 </body>
 ```
 
 ### HTML Content Context
+
 ```java
 <textarea name="text">
     <b><%= Encode.forHtmlContent(UNTRUSTED) %></b>
@@ -30,8 +32,9 @@ the name of the target context and "untrustedData" is untrusted output.
 ```
 
 ### HTML Attribute context
+
 ```java
-	<input type="text" name="address" value="<%= Encode.forHtmlAttribute(UNTRUSTED) %>" />
+    <input type="text" name="address" value="<%= Encode.forHtmlAttribute(UNTRUSTED) %>" />
 ```
 Generally <b>Encode.forHtml(UNTRUSTED)</b> is also safe but slightly
 less efficient for the above two contexts (for textarea content and
@@ -39,68 +42,119 @@ input value text) since it encodes more characters than necessary but
 might be easier for developers to use.
 
 ### Encode URL parameter values
+
 ```java
-	<a href="/search?value=<%= Encode.forUriComponent(UNTRUSTED) %>&order=1#top">
+    <a href="/search?value=<%= Encode.forUriComponent(UNTRUSTED) %>&order=1#top">
 ```
 
 ### Encode REST URL parameters
+
 ```java
-	<a href="/page/<%= Encode.forUriComponent(UNTRUSTED) %>">
+    <a href="/page/<%= Encode.forUriComponent(UNTRUSTED) %>">
 ```
 
 ### Handling a Full Untrusted URL
 
 When handling a full URL with the OWASP Java encoder, first validate to ensure the URL is in the format of a legal URL.
+
 ```java
-	String url = validateURL(untrustedInput);
+    String url = validateURL(untrustedInput);
 ```
 
 Then encode the URL as an HTML attribute when outputting to the page.
 Note the linkable text needs to be encoded in a different context.
+
 ```java
-	<a href="<%= Encode.forHtmlAttribute(untrustedUrl) %>">
-	    <%= Encode.forHtmlContent(untrustedLinkName) %>
-	</a>
+    <a href="<%= Encode.forHtmlAttribute(untrustedUrl) %>">
+        <%= Encode.forHtmlContent(untrustedLinkName) %>
+    </a>
 ```
 
 ### Javascript Block context
+
 ```javascript
 <script type="text/javascript">
-	var msg = "<%= Encode.forJavaScriptBlock(UNTRUSTED) %>";
-	alert(msg);
+    var msg = "<%= Encode.forJavaScriptBlock(UNTRUSTED) %>";
+    alert(msg);
 </script>
 ```
 
 ### Javascript Variable context
+
 ```java
 <button onclick="alert('<%= Encode.forJavaScriptAttribute(UNTRUSTED) %>');">
-	click me
+    click me
    </button>
 ```
 
 JavaScript Content Notes: <b>Encode.forJavaScript(UNTRUSTED)</b> is safe for the above two contexts, but encodes more characters and is less efficient.
 
 ### CSS contexts
+
 ```java
-	<div style="width:<= Encode.forCssString(UNTRUSTED) %>">
-	<div style="background:<= Encode.forCssUrl(UNTRUSTED) %>">
+    <div style="width:<= Encode.forCssString(UNTRUSTED) %>">
+    <div style="background:<= Encode.forCssUrl(UNTRUSTED) %>">
 ```
 
 ### To use in a JSP with EL
 
-	<%@page contentType="text/html" pageEncoding="UTF-8"%>
-	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-	<%@taglib prefix="e" uri="https://www.owasp.org/index.php/OWASP_Java_Encoder_Project" %>
+#### Jakarta Servlet Spec
 
-	<html>
-	<head>
-	<title>
-	<b><e:forHtml value="${param.title}" /></b>
-	</title>
-	</head>
-	<body>
-	<h1>
-	<b>${e:forHtml(param.data)}</b>
-	</h1>
-	</body>
-	</html>
+If using Jakarta Servlet Spec 5+ use the following dependency and taglib:
+
+```xml
+<dependency>
+    <groupId>org.owasp.encoder</groupId>
+    <artifactId>encoder-jakarta-jsp</artifactId>
+    <version>1.3.0</version>
+</dependency>
+```
+
+```jsp
+<%@page contentType="text/html;charset=UTF-8" language="java"%>
+<%@taglib prefix="c" uri="jakarta.tags.core"%>
+<%@taglib prefix="e" uri="owasp.encoder.jakarta"%>
+<html>
+    <head>
+        <title>
+            <b><e:forHtml value="${param.title}" /></b>
+        </title>
+    </head>
+    <body>
+        <h1>
+            <b>${e:forHtml(param.data)}</b>
+        </h1>
+    </body>
+</html>
+```
+
+#### Legacy Servlet Spec
+
+If using legacy JSP (javax.servlet.jsp) use the following dependency and taglib:
+
+```xml
+<dependency>
+    <groupId>org.owasp.encoder</groupId>
+    <artifactId>encoder-jsp</artifactId>
+    <version>1.3.0</version>
+</dependency>
+```
+
+```jsp
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@taglib prefix="e" uri="https://www.owasp.org/index.php/OWASP_Java_Encoder_Project" %>
+
+<html>
+    <head>
+        <title>
+            <b><e:forHtml value="${param.title}" /></b>
+        </title>
+    </head>
+    <body>
+        <h1>
+            <b>${e:forHtml(param.data)}</b>
+        </h1>
+    </body>
+</html>
+```

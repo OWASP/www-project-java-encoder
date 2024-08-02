@@ -10,7 +10,7 @@ type: code
 
 ## About
 
-The OWASP Java Encoder is a Java 1.5+ simple-to-use drop-in high-performance encoder class with no dependencies and little baggage. This project will help Java web developers defend against Cross Site Scripting!
+The OWASP Java Encoder is a Java 1.8+ simple-to-use drop-in high-performance encoder class with no dependencies and little baggage. This project will help Java web developers defend against Cross Site Scripting!
 
 Cross-Site Scripting (XSS) attacks are a type of injection, in which malicious scripts (primarily JavaScript) are injected into otherwise trusted web sites. One of the primary defenses to stop Cross Site Scripting is a technique called Contextual Output Encoding. WARNING: Please note that XSS prevention requires other defensive strategies besides encoding! For more information, please read the [Cross Site Scripting prevention cheatsheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html).
 
@@ -20,9 +20,9 @@ Happy Encoding!
 
 ## Getting Started
 
-The OWASP Java Encoder library is intended for quick contextual encoding with very little overhead, either in performance or usage. To get started, simply add the encoder-1.2.3.jar, import org.owasp.encoder.Encode and start encoding.
+The OWASP Java Encoder library is intended for quick contextual encoding with very little overhead, either in performance or usage. To get started, simply add the encoder-1.3.0.jar, import org.owasp.encoder.Encode and start encoding.
 
-Please look at the javadoc for [Encode](https://javadoc.io/doc/org.owasp.encoder/encoder/latest/index.html), to see the variety of contexts for which you can encode. Tag libraries and JSP EL functions can be found in the encoder-jsp-1.2.3.jar.
+Please look at the javadoc for [Encode](https://javadoc.io/doc/org.owasp.encoder/encoder/latest/index.html), to see the variety of contexts for which you can encode. Tag libraries and JSP EL functions can be found in the encoder-jsp-1.3.0.jar.
 
 ## Licensing
 
