@@ -19,8 +19,8 @@ repositories:
     url: https://github.com/OWASP/owasp-java-encoder
     description: The OWASP Java Encoder is a Java 1.5+ simple-to-use drop-in high-performance encoder class with no dependencies and little baggage. This project will help Java web developers defend against Cross Site Scripting!
 tags:
-  - java-encoder-tag
-  - custom-tag-1
-  - custom-tag-2
+  - java-encoder
+  - xss
+  - defend
 type: code
 website: https://owasp.org/www-project-java-encoder
