@@ -4,8 +4,8 @@ leaders:
   - name: Jim Manico
     email: jim@owasp.org
     github: jmanico
-  - name: Jeff Ichnowski
-    email: jeff.ichnowski@owasp.org
+  - name: Jeremy Long
+    email: jeremy.long@owasp.org
 level: 2
 license:
   - BSD-3-Clause
