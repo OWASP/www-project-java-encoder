@@ -10,7 +10,7 @@ level: 2
 license:
   - BSD-3-Clause
 name: OWASP Java Encoder
-pitch: Description for OWASP Java Encoder
+pitch: The OWASP Java Encoder is a Java 1.5+ simple-to-use drop-in high-performance encoder class with no dependencies and little baggage. This project will help Java web developers defend against Cross-Site Scripting!
 repositories:
   - name: www-project-java-encoder
     url: https://github.com/OWASP/www-project-java-encoder
