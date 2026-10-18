@@ -106,7 +106,7 @@ If using Jakarta Servlet Spec 5+ use the following dependency and taglib:
 <dependency>
     <groupId>org.owasp.encoder</groupId>
     <artifactId>encoder-jakarta-jsp</artifactId>
-    <version>1.3.0</version>
+    <version>1.6.0</version>
 </dependency>
 ```
 
@@ -136,7 +136,7 @@ If using legacy JSP (javax.servlet.jsp) use the following dependency and taglib:
 <dependency>
     <groupId>org.owasp.encoder</groupId>
     <artifactId>encoder-jsp</artifactId>
-    <version>1.3.0</version>
+    <version>1.6.0</version>
 </dependency>
 ```
 

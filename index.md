@@ -18,11 +18,19 @@ We actively track project issues and seek to remediate any issues that arise. Th
 
 Happy Encoding!
 
+## Current release
+
+[Java Encoder 1.6.0](https://github.com/OWASP/owasp-java-encoder/releases/tag/v1.6.0)
+is available from Maven Central. It reduces unnecessary JavaScript letter
+escaping while preserving recognized HTML-token protection across trusted
+fragments. Review the [migration guidance](https://github.com/OWASP/owasp-java-encoder/blob/main/docs/compatibility-decisions.md#javascript-output-refinement-in-160-243)
+for changed output and streaming behavior. Java 8 remains supported.
+
 ## Getting Started
 
-The OWASP Java Encoder library is intended for quick contextual encoding with very little overhead, either in performance or usage. To get started, simply add the encoder-1.3.0.jar, import org.owasp.encoder.Encode and start encoding.
+The OWASP Java Encoder library is intended for quick contextual encoding with very little overhead, either in performance or usage. To get started, simply add the encoder-1.6.0.jar, import org.owasp.encoder.Encode and start encoding.
 
-Please look at the javadoc for [Encode](https://javadoc.io/doc/org.owasp.encoder/encoder/latest/index.html), to see the variety of contexts for which you can encode. Tag libraries and JSP EL functions can be found in the encoder-jsp-1.3.0.jar.
+Please look at the javadoc for [Encode](https://javadoc.io/doc/org.owasp.encoder/encoder/latest/index.html), to see the variety of contexts for which you can encode. Tag libraries and JSP EL functions can be found in the encoder-jsp-1.6.0.jar.
 
 ## Licensing
 

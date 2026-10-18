@@ -8,6 +8,8 @@ tags: java-encoder-tag
 
 ## News and Events
 
+* [18 October 2026](https://github.com/OWASP/owasp-java-encoder/releases/tag/v1.6.0) 1.6.0: reduce unnecessary JavaScript letter escaping while retaining fragment protection.
+
 * [17 November 2025](https://github.com/OWASP/owasp-java-encoder/releases/tag/v1.4.0) 1.4.0 Released!
 * [20 August 2024] 1.3.1 Released!
 * [2 August 2024] 1.3.0 Released!
