@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OWASP Java Encoder has moved</title>
+  <meta name="description" content="The OWASP Java Encoder project page now lives at owasp.org/projects/java-encoder.">
+  <link rel="canonical" href="https://owasp.org/projects/java-encoder">
+  <style>
+    :root {
+      --bg: #f4f6fb;
+      --bg-glow: #dfe6ff;
+      --card: #ffffff;
+      --text: #14161f;
+      --muted: #5a6072;
+      --border: #e3e6ef;
+      --accent: #2f5bea;
+      --accent-hover: #2148c9;
+      --accent-text: #ffffff;
+      --chip-bg: #eef2ff;
+      --chip-text: #2f4bb8;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d0f16;
+        --bg-glow: #1a2244;
+        --card: #161925;
+        --text: #eef0f6;
+        --muted: #a3a9bb;
+        --border: #262b3b;
+        --accent: #5b82ff;
+        --accent-hover: #7896ff;
+        --accent-text: #0d0f16;
+        --chip-bg: #1e2540;
+        --chip-text: #a9bcff;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px 16px;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background: radial-gradient(1200px 600px at 50% -10%, var(--bg-glow), transparent 70%), var(--bg);
+      -webkit-font-smoothing: antialiased;
+    }
+    main {
+      width: 100%;
+      max-width: 560px;
+      padding: 48px 40px 40px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 20px 48px -16px rgba(16, 24, 40, 0.18);
+      text-align: center;
+    }
+    .chip {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: var(--chip-bg);
+      color: var(--chip-text);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+    h1 {
+      margin: 20px 0 12px;
+      font-size: clamp(28px, 6vw, 36px);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+    p {
+      margin: 0 auto 32px;
+      max-width: 420px;
+      font-size: 17px;
+      line-height: 1.55;
+      color: var(--muted);
+    }
+    .go {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 28px;
+      border-radius: 12px;
+      background: var(--accent);
+      color: var(--accent-text);
+      font-size: 17px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color 0.15s ease, transform 0.15s ease;
+    }
+    .go:hover { background: var(--accent-hover); transform: translateY(-1px); }
+    .go:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+    .go svg { width: 18px; height: 18px; flex: none; }
+    .url {
+      display: block;
+      margin-top: 14px;
+      font-size: 14px;
+      color: var(--muted);
+      word-break: break-all;
+    }
+    footer {
+      margin-top: 36px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 14px;
+      color: var(--muted);
+    }
+    footer a { color: var(--text); font-weight: 500; text-underline-offset: 3px; }
+    @media (max-width: 480px) {
+      main { padding: 36px 22px 28px; border-radius: 16px; }
+      .go { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <span class="chip">OWASP Java Encoder</span>
+    <h1>This project page has moved</h1>
+    <p>This GitHub Pages site is no longer maintained. Documentation, releases and news now live on owasp.org.</p>
+    <a class="go" href="https://owasp.org/projects/java-encoder">
+      Go to the project page
+      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+    </a>
+    <span class="url">owasp.org/projects/java-encoder</span>
+    <footer>
+      Source code and releases on
+      <a href="https://github.com/OWASP/owasp-java-encoder">GitHub</a>
+    </footer>
+  </main>
+</body>
+</html>
