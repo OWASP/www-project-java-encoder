@@ -1,4 +1,5 @@
 # www-project-java-encoder
 
-The code for the web page for  OWASP Java Encoder 
-Webpage can be fond at: https://owasp.org/www-project-java-encoder/
+This repository backed the legacy OWASP Java Encoder project page. The current
+project page is <https://owasp.org/projects/java-encoder>, and the code lives at
+<https://github.com/OWASP/owasp-java-encoder>.

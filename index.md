@@ -1,42 +1,33 @@
 ---
-
-layout: col-sidebar
+layout: null
 title: OWASP Java Encoder
-tags: java-encoder-tag
-level: 0
-type: code
-
+permalink: /
 ---
-
-## About
-
-The OWASP Java Encoder is a Java 1.8+ simple-to-use drop-in high-performance encoder class with no dependencies and little baggage. This project will help Java web developers defend against Cross Site Scripting!
-
-Cross-Site Scripting (XSS) attacks are a type of injection, in which malicious scripts (primarily JavaScript) are injected into otherwise trusted web sites. One of the primary defenses to stop Cross Site Scripting is a technique called Contextual Output Encoding. WARNING: Please note that XSS prevention requires other defensive strategies besides encoding! For more information, please read the [Cross Site Scripting prevention cheatsheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html).
-
-We actively track project issues and seek to remediate any issues that arise. The project owners feel this project is stable and ready for production use and are seeking project status promotion.
-
-Happy Encoding!
-
-## Current release
-
-[Java Encoder 1.6.0](https://github.com/OWASP/owasp-java-encoder/releases/tag/v1.6.0)
-is available from Maven Central. It reduces unnecessary JavaScript letter
-escaping while preserving recognized HTML-token protection across trusted
-fragments. Review the [migration guidance](https://github.com/OWASP/owasp-java-encoder/blob/main/docs/compatibility-decisions.md#javascript-output-refinement-in-160-243)
-for changed output and streaming behavior. Java 8 remains supported.
-
-## Getting Started
-
-The OWASP Java Encoder library is intended for quick contextual encoding with very little overhead, either in performance or usage. To get started, simply add the encoder-1.6.0.jar, import org.owasp.encoder.Encode and start encoding.
-
-Please look at the javadoc for [Encode](https://javadoc.io/doc/org.owasp.encoder/encoder/latest/index.html), to see the variety of contexts for which you can encode. Tag libraries and JSP EL functions can be found in the encoder-jsp-1.6.0.jar.
-
-## Licensing
-
-The OWASP Java Encoder is free to use under the New BSD License. 
-
-## GitHub
-
-Extensive documentation on how to use this project can be found in our [GitHub repository](https://github.com/OWASP/owasp-java-encoder).
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OWASP Java Encoder has moved</title>
+  <link rel="canonical" href="https://owasp.org/projects/java-encoder">
+  <style>
+    body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+           font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background: #f7f7f8; color: #1b1b1f; }
+    main { max-width: 36rem; padding: 2rem 1.5rem; text-align: center; }
+    h1 { font-size: 1.75rem; margin: 0 0 1rem; }
+    p { line-height: 1.5; margin: 0 0 1.5rem; }
+    a.go { display: inline-block; padding: 0.9rem 1.6rem; border-radius: 0.5rem; background: #1b1b1f;
+           color: #fff; font-weight: 600; text-decoration: none; word-break: break-all; }
+    a.go:hover, a.go:focus { background: #3a3a44; }
+    small { display: block; margin-top: 2rem; color: #5c5c66; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>OWASP Java Encoder has moved</h1>
+    <p>This page is no longer maintained. The current project page is on owasp.org.</p>
+    <a class="go" href="https://owasp.org/projects/java-encoder">owasp.org/projects/java-encoder</a>
+    <small>Source code and releases: <a href="https://github.com/OWASP/owasp-java-encoder">github.com/OWASP/owasp-java-encoder</a></small>
+  </main>
+</body>
+</html>
